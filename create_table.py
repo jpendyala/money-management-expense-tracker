@@ -2,7 +2,7 @@ import boto3
 import time
 
 # Initialize the DynamoDB resource
-dynamodb = boto3.resource('dynamodb')
+dynamodb = boto3.resource('dynamodb', region_name='us-east-1')
 
 # Define the table name and schema
 table_name = "TransactionsTable"
