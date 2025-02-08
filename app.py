@@ -15,7 +15,7 @@ openai.api_key = os.getenv("OPENAI_API_KEY")
 # Initialize DynamoDB
 dynamodb = boto3.resource('dynamodb')
 table_name = "TransactionsTable"  # Ensure this matches your DynamoDB setup
-table = dynamodb.Table(table_name)
+table = dynamodb.Table(table_name, region_name="us-east-1")
 
 # Streamlit UI
 st.title("Enhanced Expense Tracker with OpenAI GPT")
