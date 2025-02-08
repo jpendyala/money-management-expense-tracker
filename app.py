@@ -13,7 +13,7 @@ load_dotenv()
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
 # Initialize DynamoDB
-dynamodb = boto3.resource('dynamodb')
+dynamodb = boto3.resource('dynamodb', region_name="us-east-1")
 table_name = "TransactionsTable"  # Ensure this matches your DynamoDB setup
 table = dynamodb.Table(table_name, region_name="us-east-1")
 
